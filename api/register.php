@@ -25,3 +25,4 @@ $password = $_POST['password'] ?? '';
  
 // ► Ausgeben – nur zum Test!
 echo "PHP meldet, Daten erfolgreich empfangen";
+// test
