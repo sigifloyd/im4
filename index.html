@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medibuddy</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Ich bin eine schwo test test</h1>
+  <div class="container">
+    <!-- Header -->
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <img src="assets/Logo MediBuddy.png" alt="Medibuddy Logo" style="height: 60px;" />
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <a href="bearbeiten.html" style="text-decoration: none; color: #000; font-size: 0.9rem; white-space: nowrap;">Medikamente<br />bearbeiten</a>
+        <a href="hinzufuegen.html" style="text-decoration: none;">
+          <div style="width: 30px; height: 30px; background-color: #7b68ee; border-radius: 50%; color: white; display: flex; justify-content: center; align-items: center; font-size: 1.5rem;">+</div>
+        </a>
+      </div>
+    </div>
 
+    <!-- Datum und Begrüßung -->
+    <h1 id="weekday">Wochentag,</h1>
+    <h1 id="date">Datum</h1>
+    <h2 id="welcome-message">Guten Tag, Nutzer</h2>
+
+    <!-- Medikamentenliste -->
+    <div id="medikamente">
+      <label>Morgen</label>
+      <div class="checkbox-container">
+        <input type="checkbox" id="med1" />
+        <label for="med1"><b>Ramipril 5 mg</b></label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="med2" />
+        <label for="med2"><b>Thyroxin 50 µg</b></label>
+      </div>
+
+      <label>Mittag</label>
+      <div class="checkbox-container">
+        <input type="checkbox" id="med3" />
+        <label for="med3"><b>Metformin 850 mg</b></label>
+      </div>
+
+      <label>Abend</label>
+      <div class="checkbox-container">
+        <input type="checkbox" id="med4" />
+        <label for="med4"><b>Atorvastatin 20 mg</b></label>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+      <button id="prev-day" style="background: none; border: none; font-size: 2rem; color: #7b68ee; cursor: pointer;">&#8592;</button>
+      <button id="next-day" style="background: none; border: none; font-size: 2rem; color: #7b68ee; cursor: pointer;">&#8594;</button>
+    </div>
+  </div>
+
+  <!-- JavaScript einbinden -->
+  <script src="js/index.js"></script>
+  <script src="js/protected.js"></script>
 </body>
 </html>

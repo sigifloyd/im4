@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    <div class="form-header">
+      <!-- Ersetze den Pfad durch dein tatsächliches Bild -->
+      <img src="assets/Logo MediBuddy.png" alt="Logo" />
+    </div>
 
-    <h1>Jetzt registrieren für unsere super App</h1>
+    <h1>Registration</h1>
 
     <form id="registerForm" action="">
+      <label for="vorname">Vorname</label>
+      <input id="vorname" type="text" />
 
+      <label for="name">Nachname</label>
+      <input id="name" type="text" />
 
-    <label for="username">Benutzername</label>
-    <input id="username" type="text" />
-    <br />
-    <br />
+      <label for="email">E-Mail</label>
+      <input id="email" type="email" />
 
+      <label for="geburt">Geburtsdatum</label>
+      <input id="geburt" type="date" />
 
-    <label for="password">Passwort</label>   
-    <input id="password" type="password" />
-    <br />
-    <br />
+      <label for="passwort">Passwort</label>
+      <input id="passwort" type="password" />
 
-    <label for="email">E-Mail</label>
-    <input id="email" type="email" />
-    <br />
-    <br />
+      <label for="passwort2">Passwort wiederholen</label>
+      <input id="passwort2" type="password" />
 
-    <button type="submit">Registrieren</button>
+      <div class="checkbox-container">
+        <input type="checkbox" id="datenschutz" />
+        <label for="datenschutz">Einwilligung in <b>Datenschutzbestimmungen</b></label>
+      </div>
 
-</form>
+      <button type="submit">Registrieren</button>
+    </form>
+  </div>
 
-    <script src="js/register.js"></script>
-
+  <script src="js/register.js"></script>
 </body>
 </html>
