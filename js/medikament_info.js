@@ -9,8 +9,8 @@ if (!id) {
     .then(data => {
       if (data.status === "success") {
         const med = data.med;
+
         document.getElementById("medikamentName").textContent = `${med.name} ${med.dosierung}`;
-        document.getElementById("bestandInfo").innerHTML = `Bestand<br><span style="font-size: 1.5rem; color: #7b68ee;">${med.packungsgroesse ?? '?'} / 30</span>`;
 
         const details = `
           <p><strong>Medikamentenform</strong><br>${med.form}</p>
@@ -21,15 +21,16 @@ if (!id) {
           <p><strong>Kategorie / Zweck</strong><br>${med.zweck || '-'}</p>
           <p><strong>Ablaufdatum</strong><br>${formatDate(med.ablaufdatumPackung)}</p>
         `;
+
         document.getElementById("medikamentDetails").innerHTML = details;
       } else {
         document.getElementById("medikamentDetails").innerHTML = `<p>Fehler: ${data.message}</p>`;
       }
     });
+}
 
-  function formatDate(dateStr) {
-    if (!dateStr) return "-";
-    const date = new Date(dateStr);
-    return date.toLocaleDateString("de-CH", { day: "numeric", month: "long", year: "numeric" });
-  }
+function formatDate(dateStr) {
+  if (!dateStr) return "-";
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("de-CH", { day: "numeric", month: "long", year: "numeric" });
 }

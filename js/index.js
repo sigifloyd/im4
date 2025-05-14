@@ -75,7 +75,7 @@ function loadMedikamente() {
               medLink.href = `medikament_info.html?id=${med.id}`;
               medLink.style.color = "#7b68ee";
               medLink.style.textDecoration = "none";
-              medLink.innerHTML = `<b>${med.name} ${med.dosierung}</b>`;
+              medLink.innerHTML = `<b>${med.name} </b>`;
               
               const medLabel = document.createElement("label");
               medLabel.setAttribute("for", checkbox.id);
