@@ -35,7 +35,7 @@ body {
   h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2rem;
-    font-weight: light;
+    font-weight: regular;
     color: #6161a5;
     text-align: left;
   }
@@ -73,7 +73,7 @@ body {
     width: 1.2rem;
     height: 1.2rem;
     margin-right: 0.8rem;
-    accent-color: #7b68ee;
+    accent-color: #7b6aff;
   }
   
   .checkbox-container label {
@@ -83,12 +83,56 @@ body {
   .checkbox-container b {
     font-weight: bold;
   }
+
+  /* Allgemein: Runde Checkboxen mit Rand */
+.checkbox-container input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 2px solid #6161a5;
+  margin-right: 0.8rem;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+}
+
+
+.checkbox-container input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  border: 2px solid #6161a5;
+  margin-right: 0.8rem;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+}
+
+/* Aktivierte Checkbox: Farbig gefüllt */
+.checkbox-container input[type="checkbox"]:checked,
+.checkbox-container input[type="radio"]:checked {
+  background-color: #7b6aff;
+  border-color: #7b6aff;
+}
+
+/* Optional: animierter Übergang */
+.checkbox-container input[type="checkbox"],
+.checkbox-container input[type="radio"] {
+  transition: all 0.2s ease;
+}
+
   
   button[type="submit"] {
     width: 100%;
     padding: 1rem;
     margin-top: 2rem;
-    background-color: #7b68ee;
+    background-color: #7b6aff;
     color: white;
     font-size: 1.1rem;
     border: none;
@@ -97,6 +141,77 @@ body {
   }
   
   button[type="submit"]:hover {
-    background-color: #6a5acd;
+    background-color: #6161a5;
   }
   
+  .checkbox-container:hover {
+    background-color: rgba(123, 104, 238, 0.1);
+    border-radius: 10px;
+  }
+  
+
+  #deleteButton {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #FF6A6A; /* deine gewünschte Farbe */
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: none; /* wird via JS eingeblendet */
+  }
+  
+  #deleteButton:hover {
+    background-color: #e05c5c; /* leicht dunklere Hover-Farbe */
+  }
+  
+  #speicherButton:hover {
+    background-color: #6161a5; /* leicht dunklere Hover-Farbe */
+  }
+
+  .arrow-button {
+    background: none;
+    border: none;
+    font-size: 5rem;          /* größer */
+    font-weight: bold;        /* fetter */
+    color: #7b6aff;
+    cursor: pointer;
+    padding: 0 rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+  
+  .arrow-button:hover {
+    transform: scale(1.2);    /* leichtes Vergrößern beim Hover */
+    color: #6161a5;           /* dunklerer Violettton beim Hover */
+  }
+  
+
+  /* Medikamenten-Checkboxen (index.html) */
+#medikamente input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid #6161a5;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Wenn aktiv: farbig gefüllt */
+#medikamente input[type="checkbox"]:checked {
+  background-color: #7b68ee;
+  border-color: #7b68ee;
+}
+
+/* Optional: weiches Hover-Verhalten */
+#medikamente input[type="checkbox"]:hover {
+  box-shadow: 0 0 5px rgba(123, 104, 238, 0.5);
+  transform: scale(1.05);
+  transition: 0.2s ease;
+}

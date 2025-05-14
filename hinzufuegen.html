@@ -9,7 +9,10 @@
 <body>
   <div class="container">
     <div class="form-header">
-      <img src="assets/Logo MediBuddy.png" alt="Medibuddy Logo">
+        <a href="index.html">
+            <img src="assets/Logo MediBuddy.png" alt="Medibuddy Logo" style="height: 60px; cursor: pointer;" />
+          </a>
+          
       <h1 id="form-title">Hinzufügen</h1>
       <h2 id="form-subtitle">Dein Medikament erfassen.</h2>
       
@@ -62,9 +65,9 @@
       <label for="ablaufdatum">Ablaufdatum Packung</label>
       <input type="date" id="ablaufdatum" name="ablaufdatum">
 
-      <button type="submit" style="background-color: #6a5acd;">Medikament speichern</button>
-      <button type="button" id="deleteButton" style="background-color: #f44336; display: none;">
-        Medikament löschen
+      <button type="submit" id="speicherButton">Medikament speichern</button>
+      <button type="button" id="deleteButton">Medikament löschen</button>
+
       </button>
     </form>
   </div>

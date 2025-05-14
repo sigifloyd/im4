@@ -14,7 +14,7 @@ if (!$benutzer_id) {
 
 try {
     $stmt = $pdo->prepare("
-        SELECT id, name, dosierung, einnahmezeit
+        SELECT id, name, dosierung, einnahmezeit, packungsgroesse
         FROM medikament
         WHERE benutzer_id = :benutzer_id
           AND startdatum <= :datum
