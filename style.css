@@ -1,198 +1,180 @@
+/* Grundstruktur */
 body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #F0F0F0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 2rem;
-  }
-  
-  .container {
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .form-header {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .form-header img {
-    height: 100px;
-    margin-bottom: 1rem;
-  }
-  
-  h1 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #020202;
-    text-align: left;
-  }
-
-  h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 2rem;
-    font-weight: regular;
-    color: #6161a5;
-    text-align: left;
-  }
-  
-  
-  
-  label {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    display: block;
-    margin-top: 1.5rem;
-    font-weight: bold;
-    color: #020202;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="date"] {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    margin-top: 0.5rem;
-    border: none;
-    border-radius: 15px;
-    background-color: rgba(123, 104, 238, 0.2);
-    font-size: 1rem;
-  }
-  
-  .checkbox-container {
-    display: flex;
-    align-items: center;
-    margin-top: 1.5rem;
-  }
-  
-  .checkbox-container input[type="checkbox"] {
-    width: 1.2rem;
-    height: 1.2rem;
-    margin-right: 0.8rem;
-    accent-color: #7b6aff;
-  }
-  
-  .checkbox-container label {
-    font-weight: normal;
-  }
-  
-  .checkbox-container b {
-    font-weight: bold;
-  }
-
-  /* Allgemein: Runde Checkboxen mit Rand */
-.checkbox-container input[type="checkbox"]{
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  border: 2px solid #6161a5;
-  margin-right: 0.8rem;
-  cursor: pointer;
-  position: relative;
-  background-color: #fff;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #6161a5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
+.container {
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #F0F0F0;
+  padding: 2rem;
+  border-radius: 30px;
+}
 
+/* Header */
+.form-header {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.form-header img {
+  height: 100px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* Typografie */
+h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #020202;
+  text-align: left;
+}
+
+h2, #welcome-message {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #6161a5;
+  text-align: left;
+}
+
+/* Labels */
+label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #020202;
+}
+
+/* Eingabefelder */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 15px;
+  background-color: rgba(123, 104, 238, 0.2);
+  font-size: 1.2rem;
+  box-sizing: border-box;
+}
+
+/* Checkboxen & Radiobuttons */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.checkbox-container input[type="checkbox"],
 .checkbox-container input[type="radio"] {
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   width: 1.7rem;
   height: 1.7rem;
   border-radius: 50%;
   border: 2px solid #6161a5;
   margin-right: 0.8rem;
   cursor: pointer;
-  position: relative;
   background-color: #fff;
+  transition: all 0.2s ease;
 }
 
-/* Aktivierte Checkbox: Farbig gefüllt */
 .checkbox-container input[type="checkbox"]:checked,
 .checkbox-container input[type="radio"]:checked {
   background-color: #7b6aff;
   border-color: #7b6aff;
 }
 
-/* Optional: animierter Übergang */
-.checkbox-container input[type="checkbox"],
-.checkbox-container input[type="radio"] {
-  transition: all 0.2s ease;
+.checkbox-container:hover {
+  background-color: rgba(123, 104, 238, 0.1);
+  border-radius: 10px;
 }
 
-  
-  button[type="submit"] {
-    width: 100%;
-    padding: 1rem;
-    margin-top: 2rem;
-    background-color: #7b6aff;
-    color: white;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #6161a5;
-  }
-  
-  .checkbox-container:hover {
-    background-color: rgba(123, 104, 238, 0.1);
-    border-radius: 10px;
-  }
-  
+.checkbox-container label {
+  font-weight: normal;
+}
 
-  #deleteButton {
-    width: 100%;
-    padding: 1rem;
-    margin-top: 1rem;
-    background-color: #FF6A6A; /* deine gewünschte Farbe */
-    color: white;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    display: none; /* wird via JS eingeblendet */
-  }
-  
-  #deleteButton:hover {
-    background-color: #e05c5c; /* leicht dunklere Hover-Farbe */
-  }
-  
-  #speicherButton:hover {
-    background-color: #6161a5; /* leicht dunklere Hover-Farbe */
-  }
+.checkbox-container b {
+  font-weight: bold;
+}
 
-  .arrow-button {
-    background: none;
-    border: none;
-    font-size: 5rem;          /* größer */
-    font-weight: bold;        /* fetter */
-    color: #7b6aff;
-    cursor: pointer;
-    padding: 0 rem;
-    line-height: 1;
-    transition: transform 0.2s ease;
-  }
-  
-  .arrow-button:hover {
-    transform: scale(1.2);    /* leichtes Vergrößern beim Hover */
-    color: #6161a5;           /* dunklerer Violettton beim Hover */
-  }
-  
+/* Buttons */
+button[type="submit"],
+#deleteButton,
+#cancelButton {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
 
-  /* Medikamenten-Checkboxen (index.html) */
+button[type="submit"] {
+  background-color: #7b6aff;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #6161a5;
+}
+
+#deleteButton {
+  background-color: #FF6A6A;
+  color: white;
+  display: none;
+}
+
+#deleteButton:hover {
+  background-color: #e05c5c;
+}
+
+#cancelButton {
+  background-color: #cccccc;
+  color: black;
+}
+
+#cancelButton:hover {
+  background-color: #606060;
+}
+
+/* Navigation (Pfeile) */
+.arrow-button {
+  background: none;
+  border: none;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #7b6aff;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.arrow-button:hover {
+  transform: scale(1.2);
+  color: #6161a5;
+}
+
+/* Medikamenten-Checkboxen */
 #medikamente input[type="checkbox"] {
   appearance: none;
-  -webkit-appearance: none;
   width: 1.6rem;
   height: 1.6rem;
   border: 2px solid #6161a5;
@@ -203,15 +185,73 @@ body {
   position: relative;
 }
 
-/* Wenn aktiv: farbig gefüllt */
 #medikamente input[type="checkbox"]:checked {
   background-color: #7b68ee;
   border-color: #7b68ee;
 }
 
-/* Optional: weiches Hover-Verhalten */
 #medikamente input[type="checkbox"]:hover {
   box-shadow: 0 0 5px rgba(123, 104, 238, 0.5);
   transform: scale(1.05);
   transition: 0.2s ease;
+}
+
+/* Plus-Knopf */
+.plus-button {
+  width: 36px;
+  height: 36px;
+  background-color: #6161a5;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 600px) {
+  h1, h2, #welcome-message {
+    font-size: 1.5rem;
+  }
+
+  .arrow-button {
+    font-size: 3rem;
+  }
+
+  .plus-button {
+    width: 32px;
+    height: 32px;
+    font-size: 1.4rem;
+  }
+
+  input, label, button {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 600px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="date"],
+  input[type="time"],
+  input[type="number"] {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+
+  .arrow-button {
+    font-size: 6rem;
+  }
 }

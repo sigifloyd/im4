@@ -8,13 +8,27 @@
 </head>
 <body>
   <div class="container">
-    <a href="index.html">
-      <img src="assets/Logo MediBuddy.png" alt="Medibuddy Logo" style="height: 60px; cursor: pointer;" />
-    </a>
+    <!-- Header -->
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html">
+        <img src="assets/Logo MediBuddy.png" alt="Medibuddy Logo" style="height: 60px; cursor: pointer;" />
+      </a>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <a href="hinzufuegen.html" style="text-decoration: none;">
+          <div class="plus-button">+</div>
+        </a>
+      </div>
+    </div>
     
     <h1>Medikamente bearbeiten</h1>
     <h2>Hier kannst du deine Medikamente bearbeiten.</h2>
+
     <div id="medikamentenListe"></div>
+    <br></br>
+
+    <button type="button" id="cancelButton" onclick="window.location.href='index.html'";>
+      Abbrechen
+    </button>
   </div>
 
   <script src="js/bearbeiten.js"></script>
