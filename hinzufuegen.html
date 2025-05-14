@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medikament hinzufügen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-header">
+      <img src="assets/Logo MediBuddy.png" alt="Medibuddy Logo">
+      <h1 id="form-title">Hinzufügen</h1>
+      <h2 id="form-subtitle">Dein Medikament erfassen.</h2>
+      
+    </div>
+
+    <form id="hinzufuegenForm">
+      <label for="name">Name Medi</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="form">Medikamentenform</label>
+      <input type="text" id="form" name="form" placeholder="z. B. Tablette, Tropfen, Salbe" required>
+
+      <label for="dosierung">Dosierung / Menge</label>
+      <input type="text" id="dosierung" name="dosierung" required>
+
+      <label for="frequenz">Einnahmefrequenz</label>
+      <div class="checkbox-container"><input type="radio" name="frequenz" value="täglich" required> täglich</div>
+      <div class="checkbox-container"><input type="radio" name="frequenz" value="alle 2 Tage"> alle 2 Tage</div>
+      <div class="checkbox-container"><input type="radio" name="frequenz" value="wöchentlich"> wöchentlich</div>
+      <div class="checkbox-container"><input type="radio" name="frequenz" value="individuell"> individuell</div>
+
+      <div style="margin-left: 1.5rem;">
+        <div class="checkbox-container"><input type="checkbox" name="wochentage[]" value="Montag"> Montag</div>
+        <div class="checkbox-container"><input type="checkbox" name="wochentage[]" value="Dienstag"> Dienstag</div>
+        <div class="checkbox-container"><input type="checkbox" name="wochentage[]" value="Mittwoch"> Mittwoch</div>
+        <div class="checkbox-container"><input type="checkbox" name="wochentage[]" value="Donnerstag"> Donnerstag</div>
+        <div class="checkbox-container"><input type="checkbox" name="wochentage[]" value="Freitag"> Freitag</div>
+        <div class="checkbox-container"><input type="checkbox" name="wochentage[]" value="Samstag"> Samstag</div>
+        <div class="checkbox-container"><input type="checkbox" name="wochentage[]" value="Sonntag"> Sonntag</div>
+      </div>
+
+      <label for="startdatum">Startdatum</label>
+      <input type="date" id="startdatum" name="startdatum" required>
+
+      <label for="einnahmezeit">Einnahmezeiten</label>
+      <input type="time" id="einnahmezeit" name="einnahmezeit" required>
+
+      <label for="einnahmestop">Einnahmestopp (optional)</label>
+      <input type="date" id="einnahmestop" name="einnahmestop">
+
+      <label for="hinweis">Hinweis zur Einnahme (optional)</label>
+      <input type="text" id="hinweis" name="hinweis">
+
+      <label for="zweck">Kategorie oder Zweck (optional)</label>
+      <input type="text" id="zweck" name="zweck" placeholder="z.B. Blutdruck, Schmerzmittel, Allergie">
+
+      <label for="packungsgroesse">Packungsgrösse</label>
+      <input type="number" id="packungsgroesse" name="packungsgroesse">
+
+      <label for="ablaufdatum">Ablaufdatum Packung</label>
+      <input type="date" id="ablaufdatum" name="ablaufdatum">
+
+      <button type="submit" style="background-color: #6a5acd;">Medikament speichern</button>
+      <button type="button" id="deleteButton" style="background-color: #f44336; display: none;">
+        Medikament löschen
+      </button>
+    </form>
+  </div>
+
+  <script src="js/hinzufuegen.js"></script>
+  <script src="js/protected.js"></script>
+</body>
+</html>

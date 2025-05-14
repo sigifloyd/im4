@@ -8,8 +8,11 @@ fetch("api/protected.php")
         if (data.status === "error") {
             window.location.href = "login.html";
         } else {
-            // "Guten Tag <Vorname>" ausgeben
-            document.getElementById("welcome-message").textContent = "Guten Tag " + data.vorname + "!";
+            // Vorname zwischenspeichern für später
+            sessionStorage.setItem("vorname", data.vorname);
+
+            // Begrüßung sofort anzeigen
+            document.getElementById("welcome-message").textContent = "Guten Tag, " + data.vorname + "!";
         }
     })
     .catch((error) => {

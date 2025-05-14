@@ -31,6 +31,14 @@ body {
     color: #020202;
     text-align: left;
   }
+
+  h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: light;
+    color: #6161a5;
+    text-align: left;
+  }
   
   
   
