@@ -1,5 +1,5 @@
 # im4
-🧾 Medibuddy – Medikamentenverwaltung
+Medibuddy – Medikamentenverwaltung
 
 Kurzbeschrieb
 Medibuddy ist eine Webapplikation zur übersichtlichen Verwaltung von Medikamenten. Nutzer*innen können Medikamente hinzufügen, bearbeiten, abhaken und detaillierte Informationen anzeigen lassen. Ziel ist eine intuitive und zugängliche Oberfläche – auch für ältere Zielgruppen.
