@@ -10,7 +10,7 @@ if (!id) {
       if (data.status === "success") {
         const med = data.med;
 
-        document.getElementById("medikamentName").textContent = `${med.name} ${med.dosierung}`;
+        document.getElementById("medikamentName").textContent = `${med.name} `;
 
         const details = `
           <p><strong>Medikamentenform</strong><br>${med.form}</p>

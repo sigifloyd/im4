@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
           item.style.cursor = "pointer";
 
           const label = document.createElement("label");
-          label.innerHTML = `<b>${med.name} ${med.dosierung}</b>`;
+          label.innerHTML = `<b>${med.name} </b>`;
 
           item.appendChild(label);
           item.onclick = () => {

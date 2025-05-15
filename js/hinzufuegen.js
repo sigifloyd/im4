@@ -10,6 +10,30 @@ document.addEventListener("DOMContentLoaded", () => {
     if (title) title.textContent = "Bearbeiten";
     if (subtitle) subtitle.textContent = "Medikament bearbeiten oder löschen.";
   }
+
+  // Frequenzwahl & Wochentage: Aktivieren/Deaktivieren
+  const frequenzRadios = document.querySelectorAll('input[name="frequenz"]');
+  const wochentagCheckboxes = document.querySelectorAll('.wochentag-checkbox');
+
+  function toggleWochentage(enable) {
+    wochentagCheckboxes.forEach(cb => {
+      cb.disabled = !enable;
+      if (!enable) cb.checked = false;
+    });
+  }
+
+  // Beim ersten Laden prüfen
+  const checked = document.querySelector('input[name="frequenz"]:checked');
+  if (checked && checked.value !== "individuell") {
+    toggleWochentage(false);
+  }
+
+  // Event Listener für Änderung
+  frequenzRadios.forEach(radio => {
+    radio.addEventListener("change", () => {
+      toggleWochentage(radio.value === "individuell");
+    });
+  });
 });
 
 
@@ -43,6 +67,7 @@ document.getElementById("hinzufuegenForm").addEventListener("submit", async (e) 
     alert("Es ist ein Fehler aufgetreten.");
   }
 });
+
 
 // Wenn im Bearbeitungsmodus: Daten laden
 if (medId) {

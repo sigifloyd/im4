@@ -94,6 +94,8 @@ input[type="number"] {
   transition: all 0.2s ease;
 }
 
+
+
 .checkbox-container input[type="checkbox"]:checked,
 .checkbox-container input[type="radio"]:checked {
   background-color: #7b6aff;
